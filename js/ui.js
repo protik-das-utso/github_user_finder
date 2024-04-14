@@ -5,7 +5,6 @@ class UI {
 
     showProfile(user) {
         this.profile.innerHTML = `
-
             <div class="profile border p-4 flex flex-col md:flex-row">
                 <div class="mb-4 md:mr-4">
                 <p class="bg-purple-200 p-3 rounded-full hover:bg-purple-400 text-center hover:text-white mb-2"> Profile Picture </p>
@@ -23,10 +22,10 @@ class UI {
                     <button type="button"
                         class="bg-purple-200 p-3 rounded-full text-sm hover:bg-purple-400 hover:text-white mb-2">Following <span class="bg-purple-300 rounded-full p-2">${user.following}</span></button>
                     <button type="button"
-                        class="bg-purple-200 p-3 rounded-full text-sm hover:bg-purple-400 hover:text-white mb-2"><a href="${user.blog}">Blog</a></button>
+                        class="bg-purple-200 p-3 rounded-full text-sm hover:bg-purple-400 hover:text-white mb-2"><a href="${user.blog}">Blog</a><span>&#8599;</span></button>
                     <button type="button"
                         class="bg-purple-200 p-3 rounded-full text-sm hover:bg-purple-400 hover:text-white mb-2"><a href="https://github.com/${user.login}?tab=repositories" target="_blank">Public
-                        Repository </a><span class="bg-purple-300 rounded-full p-2">${user.public_repos}</span></button>
+                        Repository </a><span class="bg-purple-300 rounded-full p-2">${user.public_repos}</span><span>&#8599;</span></button>
 
                     <button type="button"
                         class="bg-purple-200 p-3 rounded-full text-sm hover:bg-purple-400 hover:text-white">Public
@@ -35,17 +34,16 @@ class UI {
                 </div>
                 <div class="description pr-3">
                     <ul class="divide-y divide-gray-200 text-sm">
-                        <li class="h-10 py-2">Name : ${user.name}</li>
-                        <li class="h-10 py-2">Company : ${user.company}</li>
-                        <li class="h-10 py-2">Location : ${user.location}</li>
-                        <li class="h-10 py-2">Bio : ${user.bio}</li>
-                        <li class="h-10 py-2">Created Date : ${user.created_at}</li>
-                        <li class="h-10 py-2">Last Update : ${user.updated_at}</li>
+                        <li class="h-auto py-2">Name : ${user.name}</li>
+                        <li class="h-auto py-2">Company : ${user.company}</li>
+                        <li class="h-auto py-2">Location : ${user.location}</li>
+                        <li class="h-auto py-2">Bio : ${user.bio}</li>
+                        <li class="h-auto py-2">Created Date : ${user.created_at}</li>
+                        <li class="h-auto py-2">Last Update : ${user.updated_at}</li>
                     </ul>
 
                 </div>
             </div>
-        </div>
         `;
     }
 }
